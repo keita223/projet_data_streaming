@@ -134,7 +134,7 @@ def create_spark() -> SparkSession:
         .config("spark.sql.shuffle.partitions", "4")
         .config(
             "spark.jars.packages",
-            "org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1",
+            "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1",
         )
         .config("spark.sql.streaming.checkpointLocation", str(CHECKPOINT_DIR))
         .getOrCreate()
