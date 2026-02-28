@@ -204,7 +204,7 @@ def run():
     # ── Write windowed aggregations to JSON files ─────────────────────────────
     agg_query = (
         windowed.writeStream
-        .outputMode("update")
+        .outputMode("append")
         .format("json")
         .option("path", str(AGG_DIR))
         .option("checkpointLocation", str(CHECKPOINT_DIR / "agg"))
